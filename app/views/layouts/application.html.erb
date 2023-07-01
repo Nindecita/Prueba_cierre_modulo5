@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <%= javascript_importmap_tags %>
     <title>ClonTwitter</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -11,6 +12,8 @@
   </head>
 
   <body>
+  <div class= "container">
     <%= yield %>
+    </div>
   </body>
 </html>

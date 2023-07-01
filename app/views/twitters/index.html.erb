@@ -1,14 +1,26 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Twitters</h1>
+  <br>
 
-<div id="twitters">
-  <% @twitters.each do |twitter| %>
-    <%= render twitter %>
-    <p>
-      <%= link_to "Show this twitter", twitter %>
-    </p>
-  <% end %>
+<h1 class="titulo">Gestión de Twitters</h1>
+<br>
+<%= form_with url: twitters_path, method: :get do |form|%>
+  <%= form.text_field :twitter, value: params[:twitter]%>
+  <button type="submit" class="btn btn-outline-warning">Buscar</button>
+  <%end%>
+<div>
+<%== pagy_bootstrap_nav(@pagy) %>
 </div>
+<br>
+<div class="flex-container">
+  <% @twitters.each do |twitter|%>
+    <div class="jumbotron">
+    <h3><%=twitter.userName%></h3>
+    <p><%= twitter.description%></p>
+  </div>
+  <%end%>
+  </div>
+<br>
 
-<%= link_to "New twitter", new_twitter_path %>
+<br>
+
+

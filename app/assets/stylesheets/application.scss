@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+
+body{
+background-color: rgb(2, 0, 14);
+}
+
+.titulo{
+text-align: center;
+color: rgb(102, 255, 0);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  display: inline-block;
+}
+
+.jumbotron {
+  background-color: transparent;
+  padding: 50px;
+  text-align: center;
+  border: 1px solid rgb(102, 255, 0);
+  border-radius: 10px;
+  margin-top: 1rem;
+
+
+}
+
+.jumbotron h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.jumbotron p {
+  font-size: 18px;
+  color: #555;
+}
