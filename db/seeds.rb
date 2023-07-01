@@ -8,7 +8,7 @@
 require 'faker'
 
 30.times do |i|
-  Twitter.create(description: Faker::Lorem.words(number: 4),
+  Twitter.create(description: Faker::Movies::BackToTheFuture.quote,
     userName: Faker::Artist.name,
   )
 end
