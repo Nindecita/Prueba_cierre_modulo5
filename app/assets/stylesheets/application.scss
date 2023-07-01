@@ -55,7 +55,9 @@ color: rgb(102, 255, 0);
 
 .search{
   display: flex;
-  justify-content: end;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  color: rgb(102, 255, 0);
 }
 .pagy_nav{ 
   display: flex;
@@ -70,4 +72,12 @@ color: rgb(102, 255, 0);
 }
 .letras{
   color: rgb(17, 17, 17);
+}
+
+.pag{
+  display: flex;
+  justify-content: end;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  color:rgb(102, 255, 0) ;
 }

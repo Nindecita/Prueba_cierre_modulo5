@@ -1,26 +1,28 @@
-
-  <br>
-
+<br>
 <h1 class="titulo">Gestión de Twitters</h1>
 <br>
 <div class= "search">
-<%= form_with url: twitters_path, method: :get do |form|%>
-  <%= form.text_field :twitter, value: params[:twitter], class: 'form'%>
-  <button type="submit" class="btn btn-outline-warning">Buscar</button>
+  <%= form_with url: twitters_path, method: :get do |form|%>
+    <%= form.text_field :twitter, value: params[:twitter], class: 'form'%>
+    <button type="submit" class="btn btn-outline-warning">Buscar</button>
   <%end%>
+  <div>
+    <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
   </div>
-<div>
-<%== pagy_nav(@pagy) if @pagy.pages > 1 %>
 </div>
 <br>
 <div class="flex-container">
   <% @twitters.each do |twitter|%>
     <div class="jumbotron">
-    <h3 class= "letras"><%=twitter.userName%></h3>
-    <p class= "letras"><%= twitter.description%></p>
-  </div>
+      <h3 class= "letras"><%=twitter.userName%></h3>
+      <p class= "letras"><%= twitter.description%></p>
+    </div>
   <%end%>
+  <div class="pag">
+    <div>
+      <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+    </div>
   </div>
+</div>
 <div>
-<%== pagy_nav(@pagy) if @pagy.pages > 1 %>
 </div>
