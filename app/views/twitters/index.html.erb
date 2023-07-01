@@ -3,10 +3,12 @@
 
 <h1 class="titulo">Gestión de Twitters</h1>
 <br>
+<div class= "search">
 <%= form_with url: twitters_path, method: :get do |form|%>
   <%= form.text_field :twitter, value: params[:twitter]%>
   <button type="submit" class="btn btn-outline-warning">Buscar</button>
   <%end%>
+  </div>
 <div>
 <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
 </div>
@@ -19,8 +21,6 @@
   </div>
   <%end%>
   </div>
-<br>
-
-<br>
-
+<div>
 <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+</div>
